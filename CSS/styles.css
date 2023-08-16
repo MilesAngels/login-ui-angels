@@ -8,6 +8,9 @@
     /* Fonts */
     --main-font: 'Oswald', sans-serif;
     /* Colors */
+    --main-color: rgb(242, 180, 211);
+    --secondary-color: rgb(255, 106, 193);
+    --tertiary-color: #FFFFFF;
 }
 
 main {
@@ -15,8 +18,10 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: ;
+    background: linear-gradient(rgb(255,106,193,0.05), rgb(255,106,193,0.2)),url(../ASSETS/3d-boxes.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
+
 
 /* Form Stylings */
 #login-form {
@@ -25,14 +30,22 @@ main {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    border-radius: 0.5em;
     padding: min(10%, 3em);
     margin: 10px;
+    /* From https://css.glass */
+    background: rgba(15,14,21, 1);
+    box-shadow: 0 4px 30px rgba(255, 106, 193, 0.2);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 106, 193, 0.05);
+    animation: fadein 3s;
 }
 
 #welcome {
     text-align: center;
-    padding: 0 0 15px 0;
-    gap: 10px;
+    margin: 0 0 1.5em 0;
+    color: var(--main-color);
 }
 
 .welcome-heading, label, #account-recovery {
@@ -40,7 +53,6 @@ main {
 }
 
 .welcome-heading {
-    /* margin: 0 0 10px 0; */
     font-size: 2.5em;
 }
 
@@ -48,15 +60,16 @@ main {
 
 }
 
-#login-form label {
-    margin: 0 0 0.2em 0;
-    font-size: 0.9em;
+#login-form > label {
+    margin: 0 0 0.4em 0;
+    font-size: 1em;
+    color: var(--main-color);
 }
 
 #username, #password {
     margin: 0 0 0.6em 0;
     height: 1.75em;
-    padding: 0 0.35em;
+    padding: 0.4em;
     border-radius: 0.5em;
     border-width: thin;
 }
@@ -64,18 +77,42 @@ main {
 .more-options {
     display: flex;
     justify-content: space-between;
-    font-size: 0.75em;
-    margin: 0.4em 0 1em 0;
+    font-size: 0.8em;
+    margin: 0.9em 0 1.5em 0;
+    color: var(--main-color);
 }
 
 .more-options #thirty-day-save {
     line-height: normal;
-    width: 0.75em;
-    height: 0.75em;
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.more-options #account-recovery {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+input[type='checkbox'] {
+    accent-color: var(--main-color);
 }
 
 #submit-button {
-    padding: 0.5em 0;
+    padding: 0.7em 0;
     border-radius: 0.5em;
     border: none;
+    background-color: var(--main-color);
+    transition: all 0.5s ease-in-out;
+    
+}
+
+#submit-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+/* Fade In Animation */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
