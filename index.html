@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./CSS/styles.css">
     <title>Login UI</title>
 </head>
 <body>
     <main>
-
+        <!-- Start of Login Form -->
+        <form id="login-form" action="#" method="get">
+            <h1 class="welcome-heading">Welcome Back</h1>
+            <p class="welcome-message">Please enter your details.</p>
+            <label for="email">Email
+                <input type="email" name="email" id="email">
+            </label>
+            <label for="password">Password
+                <input type="password" name="password" id="password">
+            </label>
+            <div class="more-options">
+                <label for="thirty-day-save">
+                    <input type="checkbox" name="thirty-day-save" id="thirty-day-save">
+                    Remember for 30 days
+                </label>
+                <a id="account-recovery" href="#">Forgot password?</a>
+            </div>
+            <button id="submit-button" type="submit">Log in</button>
+        </form>
+        <!-- End of Login Form -->
     </main>
 </body>
 </html>
