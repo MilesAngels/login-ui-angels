@@ -7,10 +7,14 @@
 - The login box should have box-shadow and rounded edges.
 - The login box should have a username and password input field, with placeholder text like in the photo.
 - The text entered into the password field must be hidden (with asterisks or circles)
-- The login box should have a button. <br><br>
+- The login box should have a button. <br>
 
 **Extra Credit:**
 - Pictures as backgrounds or part of the Login UI.
 - Other Designs for Logins.
 - Additional design features to the login box.
-- Experiment with colors if you would like, feel free to use the color palette generator.
+- Experiment with colors if you would like, feel free to use the color palette generator. <br><br>
+
+**Project Screenshot:**
+
+![**Project Screenshot**](./ASSETS/project-screenshot.png)
