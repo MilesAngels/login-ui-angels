@@ -26,7 +26,6 @@ main {
 /* Form Stylings */
 #login-form {
     width: min(80%, 250px);
-    /* max-width: 350px; */
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -54,10 +53,6 @@ main {
 
 .welcome-heading {
     font-size: 2.5em;
-}
-
-.welcome-message {
-
 }
 
 #login-form > label {
